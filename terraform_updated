@@ -1,0 +1,17 @@
+#creating S3 resource
+
+resource "aws_s3_bucket" "my-s3-bucket" {
+  bucket_prefix = "my-s3bucket"
+  acl = "private"
+  
+  versioning {
+    enabled = true
+  }
+  
+  tags = {
+    Name = "My_Bucket"
+    Environment = "DEV"
+  }
+}
+
+
